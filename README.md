@@ -4,6 +4,16 @@ To get `AUTH_SECRET` run this command in terminal `npx auth secret` and then you
 
 ## Getting Started
 
+```bash
+npm i
+#or
+npm install
+```
+
+```bash
+npx auth secret
+```
+
 First, run the development server:
 
 ```bash
