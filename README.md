@@ -4,12 +4,12 @@ To get `AUTH_SECRET` run this command in terminal `npx auth secret` and then you
 
 ## Getting Started
 
+To install all packages run this.
 ```bash
 npm i
-#or
-npm install
 ```
 
+To get `AUTH_SECRET` key run this.
 ```bash
 npx auth secret
 ```
