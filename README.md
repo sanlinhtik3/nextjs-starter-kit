@@ -1,4 +1,4 @@
-Create .env file and put your `DATABASE_UR` url and `AUTH_SECRET`
+Create `.env` file and put your `DATABASE_UR` url and `AUTH_SECRET`
 
 ## Getting Started
 
