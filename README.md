@@ -14,7 +14,7 @@ To get `AUTH_SECRET` key run this.
 npx auth secret
 ```
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
