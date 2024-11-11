@@ -23,7 +23,16 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           });
 
           if (!existingUser) {
-            throw new Error("User not found");
+            // Hash password before storing
+            const hashedPassword = await bcrypt.hash(credentials.password, 10);
+            // Create new user
+            const user = await db.user.create({
+              data: {
+                email: credentials.email,
+                password: hashedPassword,
+              },
+            });
+            return user;
           }
 
           if (existingUser) {
@@ -51,18 +60,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             // throw new Error("User already exists");
           }
 
-          // // Hash password before storing
-          // const hashedPassword = await bcrypt.hash(credentials.password, 10);
-
-          // // Create new user
-          // const user = await db.user.create({
-          //   data: {
-          //     email: credentials.email,
-          //     password: hashedPassword,
-          //   },
-          // });
-
-          // return user;
           return credentials;
         } catch (error) {
           // Return `null` to indicate that the credentials are invalid

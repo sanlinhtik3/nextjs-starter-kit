@@ -1,5 +1,7 @@
 Create `.env` file and put your `DATABASE_UR` url and `AUTH_SECRET`
 
+To get `AUTH_SECRET` run this command in terminal `npx auth secret` and then you will see in project folder `.env.local` which has `AUTH_SECRET` and copy key and past into the `.env` file.
+
 ## Getting Started
 
 First, run the development server:
